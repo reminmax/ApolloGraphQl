@@ -29,7 +29,9 @@ class CharacterViewModel @Inject constructor(
             emit(ViewState.Success(repository.queryCharactersList()))
         } catch (ex: ApolloException) {
             Timber.e(ex)
-            emit(ViewState.Error(resourceProvider.getString(R.string.errorOccurredWhileFetchingData)))
+            emit(ViewState.Error(
+                message = resourceProvider.getString(R.string.errorOccurredWhileFetchingData))
+            )
         }
     }.flowOn(ioDispatcher)
         .stateIn(
