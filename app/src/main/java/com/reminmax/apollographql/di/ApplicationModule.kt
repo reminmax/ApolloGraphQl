@@ -1,17 +1,16 @@
 package com.reminmax.apollographql.di
 
-import com.reminmax.apollographql.data.network.RickAndMortyApi
+import android.app.Application
+import android.content.Context
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class RepositoryModule {
+object ApplicationModule {
 
-    @Singleton
     @Provides
-    fun provideWebService() = RickAndMortyApi()
+    fun appContext(app: Application): Context = app
 }
