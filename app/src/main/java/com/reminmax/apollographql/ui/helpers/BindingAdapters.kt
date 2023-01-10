@@ -7,8 +7,15 @@ import com.reminmax.apollographql.CharactersListQuery
 import com.reminmax.apollographql.ui.state.ViewState
 
 @BindingAdapter("showWhenLoading")
-fun bindVisible(view: View, uiState: ViewState<ApolloResponse<CharactersListQuery.Data>>) {
+fun bindShowWhenLoading(view: View, uiState: ViewState<ApolloResponse<CharactersListQuery.Data>>) {
     view.visibility = if (uiState is ViewState.Loading)
         View.VISIBLE
     else View.GONE
+}
+
+@BindingAdapter("hideIfErrorOccurred")
+fun bindHideIfErrorOccurred(view: View, uiState: ViewState<ApolloResponse<CharactersListQuery.Data>>) {
+    view.visibility = if (uiState is ViewState.Error)
+        View.GONE
+    else View.VISIBLE
 }
