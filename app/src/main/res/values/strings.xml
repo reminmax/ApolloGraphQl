@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">ApolloGraphQl</string>
+    <string name="appName">ApolloGraphQl</string>
+    <string name="charactersList">Characters list</string>
+    <string name="weHaveNoResultAtTheMoment">We have no result at the moment</string>
+    <string name="noResults">No results</string>
+    <string name="pleaseWait">Please wait</string>
+    <string name="errorOccurredWhileFetchingData">Error occurred while fetching data</string>
 </resources>
