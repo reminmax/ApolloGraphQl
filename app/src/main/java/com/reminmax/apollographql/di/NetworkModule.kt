@@ -1,6 +1,5 @@
 package com.reminmax.apollographql.di
 
-import android.os.Looper
 import com.apollographql.apollo3.ApolloClient
 import com.apollographql.apollo3.network.okHttpClient
 import com.reminmax.apollographql.Utils.Constants

@@ -23,7 +23,7 @@
             android:layout_marginTop="8dp"
             android:scrollbarSize="2dp"
             android:scrollbars="vertical"
-            app:hideIfErrorOccurred = "@{viewModel.characterListState}"
+            app:hideIfErrorOccurred="@{viewModel.characterListState}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/fragment_character_list" />
 
@@ -32,9 +32,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/pleaseWait"
-            app:showWhenLoading="@{viewModel.characterListState}"
             android:gravity="center"
-            android:indeterminate="true" />
+            android:indeterminate="true"
+            app:showWhenLoading="@{viewModel.characterListState}" />
 
         <include
             android:id="@+id/empty_data_parent"

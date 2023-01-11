@@ -17,7 +17,10 @@ fun bindShowWhenLoading(view: View, uiState: ViewState<ApolloResponse<Characters
 }
 
 @BindingAdapter("showWhenDetailsLoading")
-fun bindShowWhenDetailsLoading(view: View, uiState: ViewState<ApolloResponse<CharacterQuery.Data>>) {
+fun bindShowWhenDetailsLoading(
+    view: View,
+    uiState: ViewState<ApolloResponse<CharacterQuery.Data>>
+) {
     view.visibility = if (uiState is ViewState.Loading)
         View.VISIBLE
     else View.GONE

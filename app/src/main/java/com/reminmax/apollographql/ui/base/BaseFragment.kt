@@ -15,14 +15,14 @@ abstract class BaseFragment<T : ViewDataBinding>(
     @LayoutRes private val layoutResId: Int
 ) : Fragment() {
 
-    private var _binding : T? = null
+    private var _binding: T? = null
     protected val binding get() = _binding!!
 
     protected val navController by lazy {
         (activity as MainActivity).navController
     }
 
-    open fun T.initialize(){}
+    open fun T.initialize() {}
 
     override fun onCreateView(
         inflater: LayoutInflater,

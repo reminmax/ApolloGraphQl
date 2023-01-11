@@ -4,7 +4,7 @@ import android.content.Context
 
 class AndroidIResourceProvider(
     private val context: Context
-): IResourceProvider {
+) : IResourceProvider {
 
     override fun getString(resourceId: Int): String = context.getString(resourceId)
 

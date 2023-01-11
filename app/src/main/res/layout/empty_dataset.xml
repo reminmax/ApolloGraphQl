@@ -15,5 +15,4 @@
         android:text="@string/weHaveNoResultAtTheMoment"
         android:textAppearance="?attr/textAppearanceTitleMedium"
         tools:textAppearance="?attr/textAppearanceTitleMedium" />
-
 </LinearLayout>

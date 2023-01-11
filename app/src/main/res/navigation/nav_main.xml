@@ -9,7 +9,7 @@
         android:id="@+id/characterListFragment"
         android:name="com.reminmax.apollographql.ui.character_list.CharacterListFragment"
         android:label="@string/charactersList"
-        tools:layout="@layout/fragment_character_list" >
+        tools:layout="@layout/fragment_character_list">
         <action
             android:id="@+id/navigate_to_character_details_fragment"
             app:destination="@id/characterDetailsFragment" />
@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/characterDetailsFragment"
         android:name="com.reminmax.apollographql.ui.character_details.CharacterDetailsFragment"
-        android:label="@string/characterDetails" >
+        android:label="@string/characterDetails">
         <argument
             android:name="id"
             app:argType="string" />
