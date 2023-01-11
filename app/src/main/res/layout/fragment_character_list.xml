@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.reminmax.apollographql.ui.CharacterViewModel" />
@@ -24,7 +23,7 @@
             android:layout_marginTop="8dp"
             android:scrollbarSize="2dp"
             android:scrollbars="vertical"
-            app:hideIfErrorOccurred = "@{viewModel.uiState}"
+            app:hideIfErrorOccurred = "@{viewModel.characterListState}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/fragment_character_list" />
 
@@ -33,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/pleaseWait"
-            app:showWhenLoading="@{viewModel.uiState}"
+            app:showWhenLoading="@{viewModel.characterListState}"
             android:gravity="center"
             android:indeterminate="true" />
 

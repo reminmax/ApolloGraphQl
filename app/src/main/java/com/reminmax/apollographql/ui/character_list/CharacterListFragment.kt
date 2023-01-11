@@ -1,13 +1,8 @@
 package com.reminmax.apollographql.ui.character_list
 
-import android.opengl.Visibility
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
@@ -36,6 +31,21 @@ class CharacterListFragment :
         initView()
         setupAdapters()
         collectUiState()
+        handleClicks()
+    }
+
+    private fun handleClicks() {
+        characterAdapter?.onItemClicked = { character ->
+            character.let {
+                if (!character.id.isNullOrBlank()) {
+                    navController.navigate(
+                        CharacterListFragmentDirections.navigateToCharacterDetailsFragment(
+                            id = character.id
+                        )
+                    )
+                }
+            }
+        }
     }
 
     private fun initView() {
@@ -52,7 +62,7 @@ class CharacterListFragment :
 
     private fun collectUiState() {
         viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.uiState
+            viewModel.characterListState
                 .flowWithLifecycle(
                     lifecycle = viewLifecycleOwner.lifecycle,
                     minActiveState = Lifecycle.State.STARTED
