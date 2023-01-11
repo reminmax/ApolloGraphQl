@@ -5,4 +5,13 @@
     <string name="noResults">No results</string>
     <string name="pleaseWait">Please wait</string>
     <string name="errorOccurredWhileFetchingData">Error occurred while fetching data</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="characterDetails">Character details</string>
+    <string name="noCharacterDetailsFound">No character details found!</string>
+    <string name="male">Male</string>
+    <string name="someCharacterType">Some character type</string>
+    <string name="human">Human</string>
+    <string name="status">Status</string>
+    <string name="someCharacterName">Some character name</string>
 </resources>
