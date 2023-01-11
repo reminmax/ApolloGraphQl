@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/characterListFragment">
+
+    <fragment
+        android:id="@+id/characterListFragment"
+        android:name="com.reminmax.apollographql.ui.character_list.CharacterListFragment"
+        android:label="@string/charactersList"
+        tools:layout="@layout/fragment_character_list">
+        <action
+            android:id="@+id/navigate_to_character_details_fragment"
+            app:destination="@id/characterDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailsFragment"
+        android:name="com.reminmax.apollographql.ui.character_details.CharacterDetailsFragment"
+        android:label="@string/characterDetails">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+</navigation>
