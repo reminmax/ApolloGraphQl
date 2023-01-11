@@ -1,0 +1,18 @@
+{
+  "data": {
+    "characters": {
+      "results": [
+        {
+          "id": "1",
+          "name": "Rick Sanchez",
+          "species": "Human"
+        },
+        {
+          "id": "2",
+          "name": "Morty Smith",
+          "species": "Human"
+        }
+      ]
+    }
+  }
+}
