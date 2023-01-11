@@ -45,10 +45,10 @@ class CharacterDetailsFragment :
                 .collect { viewState ->
                     when (viewState) {
                         is ViewState.Success -> {
-                            if (viewState.value?.data?.character == null) {
+                            if (viewState.value?.character == null) {
                                 binding.characterDetailsFetchProgress.visibility = View.GONE
                             } else {
-                                binding.query = viewState.value.data
+                                binding.query = viewState.value
                                 binding.characterDetailsFetchProgress.visibility = View.GONE
                             }
                         }

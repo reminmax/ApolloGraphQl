@@ -70,7 +70,7 @@ class CharacterListFragment :
                 .collectLatest { viewState ->
                     when (viewState) {
                         is ViewState.Success -> {
-                            val result = viewState.value?.data?.characters?.results
+                            val result = viewState.value?.characters?.results
                             characterAdapter?.submitList(
                                 if (result?.size != 0)
                                     result

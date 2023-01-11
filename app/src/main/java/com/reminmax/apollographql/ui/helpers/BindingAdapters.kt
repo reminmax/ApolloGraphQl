@@ -4,13 +4,12 @@ import android.view.View
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import coil.load
-import com.apollographql.apollo3.api.ApolloResponse
 import com.reminmax.apollographql.CharacterQuery
 import com.reminmax.apollographql.CharactersListQuery
 import com.reminmax.apollographql.ui.state.ViewState
 
 @BindingAdapter("showWhenLoading")
-fun bindShowWhenLoading(view: View, uiState: ViewState<ApolloResponse<CharactersListQuery.Data>>) {
+fun bindShowWhenLoading(view: View, uiState: ViewState<CharactersListQuery.Data>) {
     view.visibility = if (uiState is ViewState.Loading)
         View.VISIBLE
     else View.GONE
@@ -19,7 +18,7 @@ fun bindShowWhenLoading(view: View, uiState: ViewState<ApolloResponse<Characters
 @BindingAdapter("showWhenDetailsLoading")
 fun bindShowWhenDetailsLoading(
     view: View,
-    uiState: ViewState<ApolloResponse<CharacterQuery.Data>>
+    uiState: ViewState<CharacterQuery.Data>
 ) {
     view.visibility = if (uiState is ViewState.Loading)
         View.VISIBLE
@@ -29,7 +28,7 @@ fun bindShowWhenDetailsLoading(
 @BindingAdapter("hideIfErrorOccurred")
 fun bindHideIfErrorOccurred(
     view: View,
-    uiState: ViewState<ApolloResponse<CharactersListQuery.Data>>
+    uiState: ViewState<CharactersListQuery.Data>
 ) {
     view.visibility = if (uiState is ViewState.Error)
         View.GONE
@@ -44,7 +43,7 @@ fun setImageUrl(imageView: ImageView, url: String?) {
 }
 
 @BindingAdapter("showWhenError")
-fun bindShowWhenError(view: View, uiState: ViewState<ApolloResponse<CharacterQuery.Data>>) {
+fun bindShowWhenError(view: View, uiState: ViewState<CharacterQuery.Data>) {
     view.visibility = if (uiState is ViewState.Error)
         View.VISIBLE
     else View.GONE
