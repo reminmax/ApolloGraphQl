@@ -6,6 +6,7 @@ import com.reminmax.apollographql.CharacterQuery
 import com.reminmax.apollographql.CharactersListQuery
 import com.reminmax.apollographql.Utils.WhileUiSubscribed
 import com.reminmax.apollographql.data.repository.CharacterRepository
+import com.reminmax.apollographql.data.repository.ICharacterRepository
 import com.reminmax.apollographql.di.IoDispatcher
 import com.reminmax.apollographql.ui.state.ViewState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,7 +17,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CharacterViewModel @Inject constructor(
-    private val repository: CharacterRepository,
+    private val repository: ICharacterRepository,
     //private val resourceProvider: IResourceProvider,
     @IoDispatcher private val ioDispatcher: CoroutineDispatcher
 ) : ViewModel() {
